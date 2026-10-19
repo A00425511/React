@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react';
-const coldImg = "../src/assets/cold.png"
-const mildImg = "../src/assets/mild.png"
-const sunnyImg = "../src/assets/sunny.png"
+import coldImg from "../src/assets/cold.png"
+import mildImg from "../src/assets/mild.png"
+import sunnyImg from  "../src/assets/sunny.png"
+import Bahamas from "../src/assets/Bahamas1.JPEG"
 
 const MyTown = () =>{
     const [temp, setTemp] = useState(null);
@@ -27,7 +28,7 @@ const MyTown = () =>{
     return(
         <>
         <div>
-        <img className='home' src="../src/assets/Bahamas1.JPEG" alt="242" />
+        <img className='home' src={Bahamas} alt="242" />
         <br />
         <h1>I'm from The Bahamas</h1>
         <p>It's an Archipelago in the Caribbean, home to some of the most beautiful beaches in the world!</p>
