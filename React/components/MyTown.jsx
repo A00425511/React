@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const MyTown = () =>{
     const [temp, setTemp] = useState(null);
+    const [isFahrenheit, setIsFahrenheit] = useState(false)
 
     useEffect(() => {
             const fetchWeather = async () => {
@@ -22,8 +23,26 @@ const MyTown = () =>{
         <h1>I'm from The Bahamas</h1>
         <p>It's an Archipelago in the Caribbean, home to some of the most beautiful beaches in the world!</p>
         </div>
+        <br />
+        <br />
+        <br />
+
 
         <div>
+            {temp !== null ? (
+                <>
+                    <p>
+                        Nassau:{" "}
+                        {isFahrenheit ? (temp * 9/5 + 32).toFixed(1) : temp}°
+                        {isFahrenheit ? "F" : "C"}
+                    </p>
+                    <button onClick={() => setIsFahrenheit(!isFahrenheit)}>
+                        Change to °{isFahrenheit ? "C" : "F"}
+                    </button>
+                </>
+            ) : (
+                <p>Loading weather...</p>
+            )}
            
         </div>
         </>
