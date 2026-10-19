@@ -1,8 +1,11 @@
 import React, { useState, useEffect } from 'react';
+const coldImg = "../src/assets/cold.png"
+const mildImg = "../src/assets/mild.png"
+const sunnyImg = "../src/assets/sunny.png"
 
 const MyTown = () =>{
     const [temp, setTemp] = useState(null);
-    const [isFahrenheit, setIsFahrenheit] = useState(false)
+    const [isFahrenheit, setIsFahrenheit] = useState(false);
 
     useEffect(() => {
             const fetchWeather = async () => {
@@ -14,6 +17,12 @@ const MyTown = () =>{
             };
             fetchWeather();
             }, []); 
+
+            const getImage = () => {
+                if (temp <= 10) return coldImg;
+                if (temp <= 19) return mildImg;
+                return sunnyImg;
+            }
 
     return(
         <>
@@ -31,7 +40,10 @@ const MyTown = () =>{
         <div>
             {temp !== null ? (
                 <>
-                    <p>
+                    <div>
+                        <img className="condition" src= {getImage()} alt="condition"></img>
+                    </div>
+                    <p className="weather">
                         Nassau:{" "}
                         {isFahrenheit ? (temp * 9/5 + 32).toFixed(1) : temp}°
                         {isFahrenheit ? "F" : "C"}
