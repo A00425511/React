@@ -1,39 +1,21 @@
 import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
+import AboutMe from "../components/AboutMe"
+import MyTown from "../components/MyTown"
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [page, setPage] = useState("about")
 
   return (
-    <>
-      <section id="center">
-        
-        <div>
-          <h1>Get started</h1>
-          <p>
-            
-          </p>
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
+    <div>
+      <nav>
+        <button onClick={() => setPage("about")}>About</button>
+        <button onClick={() => setPage("myTown")}>My Town</button>
+      </nav>
 
-      <div className="ticks"></div>
-
-     
-
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      {page === "about" ? <AboutMe /> : <MyTown />}
+    </div>
   )
 }
 
-export default App
+export default App;
