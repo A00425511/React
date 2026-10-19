@@ -3,7 +3,7 @@ const AboutMe = () =>{
     return(
         <section>
             <h1>About Me!</h1>
-            <img src="../src/assets/AG1.JPEG" alt="AG" />
+            <img className='me' src="../src/assets/AG1.JPEG" alt="AG" />
              <h2>
                 Hi, my name is Adrien Grant!
              </h2>
