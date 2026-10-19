@@ -1,16 +1,18 @@
-# React + Vite
+React Assignment
+Adrien Grant A00425511
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Project Description:
 
-Currently, two official plugins are available:
+This project is to showcase a basic understanding of React. The first page is just an "About Me" page, showing a picture and just my current profession. You can toggle to the next page by pressing "My Town" and on that page there will be where I'm from. There is also a picture there and the current weather along with a picture showing the current condition. This was done using an api from Open-Meteo.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+How to Run:
 
-## React Compiler
+To run, you can clone to your pc, ensure that npm, node and JavaScript is downloaded and you can in the terminal use the command "npm run dev". This will allow you to open http://localhost:5173/ and see the development local server. 
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Live URL:
 
-## Expanding the ESLint configuration
+The URL for the deployed server is:
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+AI Disclosure:
+
+I used Atreus, an AI assistant through Muse to help a little with debugging, finding a weather APT and code review to make sure I hit everything specified on the rubric. All final code was written and assembled by me, Adrien Grant Jr.""
