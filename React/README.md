@@ -17,7 +17,7 @@ Steps (in terminal):
 
 Live URL:
 
-The URL for the deployed server is:
+The URL for the deployed server is: https://react-lyart-delta.vercel.app/
 
 AI Disclosure:
 
